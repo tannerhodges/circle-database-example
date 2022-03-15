@@ -29,9 +29,9 @@ jobs:
       - run:
           name: Run example queries
           command: |
-            mysql -h 127.0.0.1 -u test -ptest -D=test --execute="create table example (id bigint(20) unsigned not null auto_increment, description text not null, primary key (id))"
-            mysql -h 127.0.0.1 -u test -ptest -D=test --execute="insert into example (description) values ('hello'), ('dolly')"
-            mysql -h 127.0.0.1 -u test -ptest -D=test --execute="select * from example"
+            mysql -h 127.0.0.1 -u test -ptest -D test --execute="create table example (id bigint(20) unsigned not null auto_increment, description text not null, primary key (id))"
+            mysql -h 127.0.0.1 -u test -ptest -D test --execute="insert into example (description) values ('hello'), ('dolly')"
+            mysql -h 127.0.0.1 -u test -ptest -D test --execute="select * from example"
 workflows:
   version: 2
   create-database-workflow:
